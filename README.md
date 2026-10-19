@@ -12,9 +12,7 @@ Agents now do most of the making. The human's job is to **prove it's right** —
 |---|---|
 | [first-principles](skills/thinking/first-principles/SKILL.md) | Lock the problem, question every belief, keep only bedrock facts, build the solution from those |
 | [delete-algorithm](skills/thinking/delete-algorithm/SKILL.md) | Question requirements, delete, then simplify — and flag a 0% deletion rate |
-| [explain](skills/thinking/explain/SKILL.md) | Explain a concept in plain English: one analogy, what it does, why it exists |
 | [tldr](skills/thinking/tldr/SKILL.md) | Compress an answer to its essence, and name the assumption it rests on |
-| [mermaid-concise-logic](skills/thinking/mermaid-concise-logic/SKILL.md) | Make diagram labels short and specific without changing the logic |
 | [new-skill](skills/thinking/new-skill/SKILL.md) | Turn any action or process into a skill file |
 
 ### design
