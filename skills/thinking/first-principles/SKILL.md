@@ -14,6 +14,7 @@ description: Use when the user wants to identify a problem and solve it from the
 ## SOP
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 400}}}%%
 flowchart TD
     START(["/first-principles invoked"])
     P1["Phase 1 · State the problem"]

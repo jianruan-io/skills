@@ -14,6 +14,7 @@ description: Encode any action or process into a Claude skill file. Use when the
 ## SOP
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 400}}}%%
 flowchart TD
     START(["/new-skill invoked"])
     START --> LISTEN

@@ -15,6 +15,7 @@ description: >-
 ## SOP
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 400}}}%%
 flowchart TD
     START(["Human runs /sprint with an intent"])
 

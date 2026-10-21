@@ -14,6 +14,7 @@ description: Use when the user says /delete-algorithm, wants to apply the Delete
 ## SOP
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 400}}}%%
 flowchart TD
     START(["/delete-algorithm invoked"])
     INPUT["Human names the process or system to analyze"]
