@@ -17,17 +17,31 @@ description: Use when the user wants to identify a problem and solve it from the
 flowchart TD
     START(["/first-principles invoked"])
     P1["Phase 1 · State the problem"]
-    G1["🛑 Problem sentence confirmed"]
+    G1["🛑 Human confirms the problem sentence"]
     P2["Phase 2 · List and question beliefs"]
-    G2["🛑 All beliefs checked"]
+    G2["🛑 Human confirms every belief was checked"]
     P3["Phase 3 · Find bedrock facts"]
-    G3["🛑 Bedrock facts locked"]
+    G3["🛑 Human locks the bedrock facts"]
     P4["Phase 4 · Build the solution"]
-    G4["🛑 Solution accepted"]
+    G4["🛑 Human accepts the solution"]
     DONE(["Done"])
 
     START --> P1 --> G1 --> P2 --> G2 --> P3 --> G3 --> P4 --> G4 --> DONE
+
+    classDef human fill:#fde2e2,stroke:#c0392b,stroke-width:2px,color:#000
+    class G1,G2,G3,G4 human
 ```
+
+> 🛑 means the human decides, and nothing after it starts until they do.
+
+**Human in the loop**
+
+| 🛑 Gate | The human decides | Nothing happens until then |
+|---|---|---|
+| Problem | The one sentence problem is the real one | Listing beliefs |
+| Beliefs | Every belief has been questioned | Finding bedrock facts |
+| Bedrock | Which facts are true no matter what | Building the solution |
+| Solution | The solution follows from those facts | The skill ends |
 
 ## Structured Output: First Principles
 

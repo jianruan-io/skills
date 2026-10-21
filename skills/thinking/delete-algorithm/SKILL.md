@@ -18,20 +18,33 @@ flowchart TD
     START(["/delete-algorithm invoked"])
     INPUT["Human names the process or system to analyze"]
     S1["Step 1 · Make Requirements Less Dumb"]
-    G1["🛑 Review requirements list"]
+    G1["🛑 Human reviews the requirements list"]
     S2["Step 2 · Delete"]
     WARN{"Deletion rate = 0%?"}
     FLAG["⚠️ Flag: not enough deleted — push harder"]
-    G2["🛑 Review deletion log"]
+    G2["🛑 Human reviews the deletion log"]
     S3["Step 3 · Simplify"]
-    G3["🛑 Review simplified process"]
+    G3["🛑 Human reviews the simplified process"]
     DONE(["Audit complete"])
 
     START --> INPUT --> S1 --> G1 --> S2 --> WARN
     WARN -- "Yes" --> FLAG --> G2
     WARN -- "No" --> G2
     G2 --> S3 --> G3 --> DONE
+
+    classDef human fill:#fde2e2,stroke:#c0392b,stroke-width:2px,color:#000
+    class G1,G2,G3 human
 ```
+
+> 🛑 means the human decides, and nothing after it starts until they do.
+
+**Human in the loop**
+
+| 🛑 Gate | The human decides | Nothing happens until then |
+|---|---|---|
+| Requirements | Each requirement serves the real goal | Deleting anything |
+| Deletion log | Each cut is right, and enough was cut | Simplifying |
+| Simplified process | What remains is the audit result | The audit closes |
 
 ## Steps
 

@@ -20,7 +20,7 @@ flowchart TD
 
     LISTEN["Human describes what to encode"]
     INFER["AI infers: task or SOP?"]
-    CONFIRM["🛑 Propose type + one-sentence rationale · wait for confirmation"]
+    CONFIRM["🛑 Human confirms task or SOP"]
     LISTEN --> INFER --> CONFIRM
 
     CONFIRM -- "task" --> TASK["Follow references/task-skill.md"]
@@ -30,10 +30,22 @@ flowchart TD
     SOP --> WRITE
 
     WRITE["Write skill files per references/skill-format.md"]
-    APPROVE["🛑 Show all files to human · wait for approval"]
+    APPROVE["🛑 Human approves every skill file"]
     DONE(["Save to .claude/skills/name/"])
     WRITE --> APPROVE --> DONE
+
+    classDef human fill:#fde2e2,stroke:#c0392b,stroke-width:2px,color:#000
+    class CONFIRM,APPROVE human
 ```
+
+> 🛑 means the human decides, and nothing after it starts until they do.
+
+**Human in the loop**
+
+| 🛑 Gate | The human decides | Nothing happens until then |
+|---|---|---|
+| Type | The skill is a task or an SOP | Any interview question or file |
+| Files | Every file says what they meant | Saving the skill |
 
 ## Structured Output: Skill Builder Status
 
