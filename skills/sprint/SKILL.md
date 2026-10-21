@@ -20,30 +20,30 @@ flowchart TD
     START(["Human runs /sprint with an intent"])
 
     subgraph P1["Phase 1: Define the what"]
-        S1["1. Use /first-principles to check if this is worth doing at all"]
+        S1["1. Use /first-principles to check<br/>if this is worth doing at all"]
         G1["🛑 Human confirms it is worth doing"]
-        S2["2. Create a Linear issue, then a worktree and branch for it"]
-        S3["3. Write a spec that defines what done means, referencing the relevant domain skills"]
-        S4["4. Use /delete-algorithm to cut the spec down to what really matters"]
+        S2["2. Create a Linear issue, then<br/>a worktree and branch for it"]
+        S3["3. Write a spec that defines<br/>what done means, referencing<br/>the relevant domain skills"]
+        S4["4. Use /delete-algorithm to cut<br/>the spec down to what really<br/>matters"]
         G2["🛑 Human approves the spec"]
         S1 --> G1 --> S2 --> S3 --> S4 --> G2
     end
 
     subgraph P2["Phase 2: Build the how"]
-        S5["5. Write eval.md with one eval for every action item in the spec"]
+        S5["5. Write eval.md with one eval<br/>for every action item in the spec"]
         G3["🛑 Human approves eval.md"]
-        S6["6. Write the evals and confirm they all fail"]
+        S6["6. Write the evals and<br/>confirm they all fail"]
         S7["7. Build until every eval passes"]
         S5 --> G3 --> S6 --> S7
         S7 -- "an eval still fails" --> S7
     end
 
     subgraph P3["Phase 3: Review the proof"]
-        S8["8. Show where the result meets each action item in the spec"]
+        S8["8. Show where the result meets<br/>each action item in the spec"]
         G4["🛑 Human approves the result"]
-        S9["9. Open a PR and answer every automated review comment"]
+        S9["9. Open a PR and answer every<br/>automated review comment"]
         G5["🛑 Human merges the PR"]
-        S10["10. Run a retro that turns every miss into a new standard in a domain skill"]
+        S10["10. Run a retro that turns<br/>every miss into a new<br/>standard in a domain skill"]
         S8 --> G4 --> S9 --> G5 --> S10
     end
 
@@ -51,7 +51,7 @@ flowchart TD
     G2 --> S5
     S7 -- "every eval passes" --> S8
     G4 -- "rejected" --> S7
-    S10 --> DONE(["Close the Linear issue and remove the worktree"])
+    S10 --> DONE(["Close the Linear issue<br/>and remove the worktree"])
 
     classDef human fill:#fde2e2,stroke:#c0392b,stroke-width:2px,color:#000
     class G1,G2,G3,G4,G5 human

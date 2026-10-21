@@ -30,7 +30,7 @@ flowchart TD
     TASK --> WRITE
     SOP --> WRITE
 
-    WRITE["Write skill files per references/skill-format.md"]
+    WRITE["Write skill files per<br/>references/skill-format.md"]
     APPROVE["🛑 Human approves every skill file"]
     DONE(["Save to .claude/skills/name/"])
     WRITE --> APPROVE --> DONE

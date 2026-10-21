@@ -17,15 +17,15 @@ description: Use when the user says /delete-algorithm, wants to apply the Delete
 %%{init: {"flowchart": {"wrappingWidth": 400}}}%%
 flowchart TD
     START(["/delete-algorithm invoked"])
-    INPUT["Human names the process or system to analyze"]
-    S1["Step 1 · Make Requirements Less Dumb"]
-    G1["🛑 Human reviews the requirements list"]
+    INPUT["Human names the process<br/>or system to analyze"]
+    S1["Step 1 · Make<br/>Requirements Less Dumb"]
+    G1["🛑 Human reviews the<br/>requirements list"]
     S2["Step 2 · Delete"]
     WARN{"Deletion rate = 0%?"}
-    FLAG["⚠️ Flag: not enough deleted — push harder"]
+    FLAG["⚠️ Flag: not enough<br/>deleted — push harder"]
     G2["🛑 Human reviews the deletion log"]
     S3["Step 3 · Simplify"]
-    G3["🛑 Human reviews the simplified process"]
+    G3["🛑 Human reviews the<br/>simplified process"]
     DONE(["Audit complete"])
 
     START --> INPUT --> S1 --> G1 --> S2 --> WARN

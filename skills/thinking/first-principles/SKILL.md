@@ -18,9 +18,9 @@ description: Use when the user wants to identify a problem and solve it from the
 flowchart TD
     START(["/first-principles invoked"])
     P1["Phase 1 · State the problem"]
-    G1["🛑 Human confirms the problem sentence"]
-    P2["Phase 2 · List and question beliefs"]
-    G2["🛑 Human confirms every belief was checked"]
+    G1["🛑 Human confirms the<br/>problem sentence"]
+    P2["Phase 2 · List and<br/>question beliefs"]
+    G2["🛑 Human confirms every<br/>belief was checked"]
     P3["Phase 3 · Find bedrock facts"]
     G3["🛑 Human locks the bedrock facts"]
     P4["Phase 4 · Build the solution"]
